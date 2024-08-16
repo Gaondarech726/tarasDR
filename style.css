@@ -1,0 +1,115 @@
+body {
+  background: rgb(145, 98, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(145, 98, 98, 1) 0%,
+    rgba(215, 79, 36, 1) 100%
+  );
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
+
+button {
+  width: 300px;
+  height: 150px;
+  border: 0;
+  border-radius: 10%;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex > h1 {
+  color: black;
+}
+
+@keyframes an {
+  0% {
+    left: 2000px;
+  }
+  25% {
+    left: 1500px;
+  }
+  50% {
+    left: 1000px;
+  }
+  75% {
+    left: 500px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes animationDance {
+  0% {
+    background: url("./Taras.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    background: url("./Taras2.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+  }
+}
+
+.taras {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  left: 2000px;
+  top: 100px;
+}
+
+.img {
+  height: 380px;
+  position: relative;
+  bottom: 110px;
+  width: 197px;
+  background: url(./Taras.jpg);
+  background-repeat: no-repeat;
+  /* animation: animationDance 4s infinite; */
+}
+
+.taras > p {
+  position: relative;
+  bottom: 130px;
+  font-size: 15px;
+  color: black;
+}
+
+.arrow {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.arrow:after {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid gray;
+  border-bottom: 3px solid gray;
+  transform: rotate(136deg);
+}
