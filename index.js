@@ -1,4 +1,4 @@
-let btn = document.querySelector("button");
+let btn = document.querySelector(".press");
 let taras = document.querySelector(".taras");
 let imgTaras = taras.querySelector(".img");
 let textTaras = taras.querySelector("p");
@@ -20,17 +20,22 @@ btn.addEventListener("click", () => {
       { once: true }
     );
   }, 300);
+  setInterval(() => {
+    if (
+      getComputedStyle(imgTaras, null).getPropertyValue("background-image") ==
+      `url("http://127.0.0.1:5500/Taras.jpg")`
+    ) {
+      imgTaras.style.backgroundImage = `url("./Taras2.jpg")`;
+    } else if (
+      getComputedStyle(imgTaras, null).getPropertyValue("background-image") ==
+      `url("http://127.0.0.1:5500/Taras2.jpg")`
+    ) {
+      imgTaras.style.backgroundImage = `url("./Taras.jpg")`;
+    }
+  }, 250);
 });
-arrow.addEventListener("click", () => {
-  if (
-    getComputedStyle(imgTaras, null).getPropertyValue("background-image") ==
-    `url("http://127.0.0.1:5500/Taras.jpg")`
-  ) {
-    imgTaras.style.backgroundImage = `url("./Taras2.jpg")`;
-  } else if (
-    getComputedStyle(imgTaras, null).getPropertyValue("background-image") ==
-    `url("http://127.0.0.1:5500/Taras2.jpg")`
-  ) {
-    imgTaras.style.backgroundImage = `url("./Taras.jpg")`;
-  }
-});
+
+function playAudio() {
+  var audio = document.getElementById("myAudio");
+  audio.play();
+}
