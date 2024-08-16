@@ -23,12 +23,12 @@ btn.addEventListener("click", () => {
   setInterval(() => {
     if (
       getComputedStyle(imgTaras, null).getPropertyValue("background-image") ==
-      `url("http://127.0.0.1:5500/Taras.jpg")`
+      `url("https://gaondarech726.github.io/tarasDR/Taras.jpg")`
     ) {
       imgTaras.style.backgroundImage = `url("./Taras2.jpg")`;
     } else if (
       getComputedStyle(imgTaras, null).getPropertyValue("background-image") ==
-      `url("http://127.0.0.1:5500/Taras2.jpg")`
+      `url("https://gaondarech726.github.io/tarasDR/Taras2.jpg")`
     ) {
       imgTaras.style.backgroundImage = `url("./Taras.jpg")`;
     }
